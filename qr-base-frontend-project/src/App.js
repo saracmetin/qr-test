@@ -1,16 +1,16 @@
 import React from 'react';
-import { IonApp } from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
-import { Route, Redirect } from 'react-router-dom';
-import Home from './components/Home.js';
+import { Route, Routes, Navigate } from 'react-router-dom';
+import Home from './components/Home';
+import SimpleComponent from './SimpleComponent';
 
 const App = () => (
-  <IonApp>
-    <IonReactRouter>
-      <Route path="/home" component={Home} exact />
-      <Route exact path="/" render={() => <Redirect to="/home" />} />
-    </IonReactRouter>
-  </IonApp>
+    <div>
+        <Routes>
+            <Route path="/home" element={<Home />} />
+            <Route path="/simple" element={<SimpleComponent />} />
+            <Route path="/" element={<Navigate to="/simple" />} />
+        </Routes>
+    </div>
 );
 
 export default App;

@@ -1,11 +1,10 @@
 import React from 'react';
 
-const Home = () => {
-  return (
+const Home = () => (
     <div>
-      <h1>HELLO THERE IS HOME PAGE NIGA</h1>
+        <h1>Home</h1>
+        <p>Welcome to the Home Page!</p>
     </div>
-  );
-};
+);
 
 export default Home;
